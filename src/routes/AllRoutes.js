@@ -11,7 +11,7 @@ export const AllRoutes = () => {
             <Route path="movies/popular" element={<MoviesList apipath="movie/popular" />} />
             <Route path="movies/top" element={<MoviesList apipath="movie/top_rated" />} />
             <Route path="movies/upcoming" element={<MoviesList apipath="movie/upcoming" />} />
-            <Route path="/search" element={<Search />} />
+            <Route path="/search" element={<Search apipath="search/movie" />} />
             <Route path="*" element={<PageNotFound />} />
         </Routes>
     </main>
