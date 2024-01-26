@@ -18,7 +18,6 @@ export const Header = () => {
   const handleSubmit = (event)=>{
       event.preventDefault();
       const queryTerm = event.target.search.value;
-      console.log(queryTerm);
       event.target.reset();
       return navigate(`/search?q=${queryTerm}`);
   }

@@ -1,9 +1,20 @@
+import { useNavigate } from "react-router-dom";
 import { Card } from "../Components/Card"
 import { useFetch } from "../hooks/useFetch";
+import { useTitle } from "../hooks/useTitle";
 
-export const MoviesList = ({apipath}) => {
+
+export const MoviesList = ({apipath , title}) => {
+  const navigate = useNavigate();
+
   const { data:movies } =useFetch(apipath);
-
+   const handleFind = (event) =>{
+    event.preventDefault();
+    const queryTerm = event.target.search.value;
+    event.target.reset();
+    return navigate(`/search?q=${queryTerm}`);
+   }
+  useTitle(title)
   return (
     <main>  
       <section className="bg-light height">
@@ -15,9 +26,11 @@ export const MoviesList = ({apipath}) => {
                   <h1>Welcome.</h1>
                   <span>Millions of movies, TV shows and people to discover. Explore now.</span>
                 </div>
-              <div className="container w-100 d-flex justify-content-center my-4 ">
-              <input className="form-control w-90 rounded-5" placeholder="Search for a movie..."></input>
-              <button className="btn btn-info rounded-5 text-white px-4 py-2 ms-2 fw-bold">Search</button>
+              <div>
+              <form onSubmit={handleFind}  className="container w-100 d-flex justify-content-center my-4 ">
+                <input name="search" className="form-control w-90 rounded-5" placeholder="Search for a movie..."></input>
+                <button className="btn btn-info rounded-5 text-white px-4 py-2 ms-2 fw-bold">Search</button>
+              </form>
               </div>
             </div>
           </div>

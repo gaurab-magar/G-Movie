@@ -49,3 +49,13 @@
     opacity: 1; /* Show on hover */
     transform: translateY(-17px); /* Move text up by 50% of its own height */
   }
+
+.img-detail{
+    width: 19rem;
+}
+.second{
+    width: 60%;
+    background-color: rgba(60, 66, 72, 0.521);
+    backdrop-filter: blur(5px); 
+
+}

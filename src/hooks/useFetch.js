@@ -9,7 +9,6 @@ export const useFetch = (apipath , queryTerm="") => {
           let response= await fetch(url);
           let json = await response.json();
           setData(json.results);
-          console.log(json.results)
         }
         fetchdata()
       },[url])
