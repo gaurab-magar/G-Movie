@@ -1,8 +1,8 @@
 export const Footer = () => {
   return (
     <footer className="footer py-5 navy text-white">
-        <div className="container">
-          <div className="row d-flex justify-content-center">
+        <div className="container foot">
+          <div className="row d-flex justify-content-center align-items-center">
             <div className="col-md-2">
               <h5 className="fw-bold">THE Basics</h5>
               <ul className="list-unstyled">

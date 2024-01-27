@@ -15,7 +15,7 @@
     right: 0;
     bottom: 0;
     width: 100%;
-    height: 100%;
+    height: 70%;
     color: #3a5065;
     font-size: 2rem;
     backdrop-filter: blur(5px); 
@@ -57,5 +57,7 @@
     width: 60%;
     background-color: rgba(60, 66, 72, 0.521);
     backdrop-filter: blur(5px); 
-
+}
+.img-thumbnail{
+    height: fit-content;
 }

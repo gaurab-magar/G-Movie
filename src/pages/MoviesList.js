@@ -18,11 +18,13 @@ export const MoviesList = ({apipath , title}) => {
   return (
     <main>  
       <section className="bg-light height">
-        <div className="container-fluid px-0">
-          <div className="header-img position-relative">
-            <img className="img-fluid" alt="header" src="https://media.themoviedb.org/t/p/w1920_and_h600_multi_faces/ctMserH8g2SeOAnCw5gFjdQF8mo.jpg"></img>
-            <div className="header-ontop">
-                <div className="ms-5">
+        <div className="container-fluid px-0 mx-md-0 mx-sm-3">
+          <div className=" mb-0 mb-md-1 position-relative">
+            <div className="img-container">
+              <img className="img-fluid" alt="header" src="https://media.themoviedb.org/t/p/w1920_and_h600_multi_faces/ctMserH8g2SeOAnCw5gFjdQF8mo.jpg"></img>
+            </div>
+            <div className="container mb-0 header-ontop">
+                <div className="wtop">
                   <h1>Welcome.</h1>
                   <span>Millions of movies, TV shows and people to discover. Explore now.</span>
                 </div>
@@ -35,8 +37,8 @@ export const MoviesList = ({apipath , title}) => {
             </div>
           </div>
             
-          <div className="container py-5 px-0">
-            <div className="px-0 row row-cols-1 row-cols-md-6 g-3 d-flex justify-content-center">
+          <div className="container mt-1 mt-md-5">
+            <div className="firstchild px-0 row row-cols-1 row-cols-md-6 g-3 d-flex justify-content-center">
               {movies.map((movie)=>(
                 <Card key={movie.id} movie={movie}/>
               ))}
